@@ -14,8 +14,13 @@
       :root {
         --header-height: 5rem;
         --color-black: rgba(0, 0, 0, 0.75);
+        --color-black-lighter: rgba(0, 0, 0, 0.5);
         --color-white: white;
+        --title-color-blue: blue;
         --text-color-gray: lightgray;
+        --container-color-2: gray;
+        --h2-font-size: 24px;
+        --font-size-max: 40px;
         /* TODO: To be adjusted */
       }
 
@@ -27,6 +32,19 @@
 
       ul {
         list-style: none;
+      }
+
+      .container {
+        max-width: 1200px;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .section__title {
+        font-size: var(--h2-font-size);
+        width: max-content;
+        margin: 2rem auto 2rem;
+        /* NOTE: Alternative centering method */
       }
 
       .header {
@@ -80,6 +98,123 @@
         top: 0.5rem;
         right: 0.5rem;
         cursor: pointer;
+      }
+
+      .home__container {
+        padding: 2rem;
+        /* justify-self: center; */
+      }
+
+      .home__name {
+        /* font-size: var(--font-size-max); */
+        text-align: center;
+      }
+
+      .home__image {
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      .home__image > img {
+        width: 300px;
+        /* TODO: To be adjusted */
+      }
+
+      .home__social {
+        display: grid;
+        row-gap: 1rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* FIXME: Problematic positioning */
+      }
+
+      .home__social-link {
+        background-color: var(--color-black-lighter);
+        color: var(--color-white);
+        padding: 6px;
+        transition: background-color 0.3s;
+      }
+
+      .home__social-link:hover {
+        background-color: var(--color-black);
+      }
+
+      .home__social-link > i {
+        font-size: 1rem;
+        /* TODO: Adjust */
+      }
+
+      .home__info {
+        margin-top: 3rem;
+      }
+
+      .home__description {
+        text-align: center;
+        color: var(--title-color-blue);
+        margin-bottom: 2rem;
+      }
+
+      .home__description > b {
+        background-color: green;
+        /* TODO: Linear-gradient */
+      }
+
+      .home__scroll {
+        display: block;
+        /* Q: Why isn't the default "display: block"? */
+        width: max-content;
+        margin: 0 auto;
+        /* NOTE: Centering alternative method */
+      }
+
+      .home__scroll-text {
+        display: none;
+      }
+
+      .home__scroll-btn {
+        background-color: var(--color-black);
+        color: var(--color-white);
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        /* NOTE: Centering alternative method */
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+      /* TODO: Animated button */
+
+      .about {
+        background-color: var(--container-color-2);
+      }
+
+      .about__image {
+        width: 200px;
+      }
+
+      .about__image > img {
+        width: 100%;
+        border: 5px solid var(--color-white);
+      }
+
+      .about__info {
+        padding-left: 1.25rem;
+      }
+
+      .about__description {
+        color: var(--title-color-blue);
+        margin-bottom: 1.5rem;
+      }
+
+      .about__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        /* Q: Column-gap vs gap? */
       }
 
       @media screen and (max-width: 992px) {
@@ -139,7 +274,82 @@
       </nav>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <section class="home section">
+        <div class="home__container container">
+          <h1 class="home__name">Ted Chen</h1>
+
+          <div class="home__profile">
+            <div class="home__image">
+              <img src="./img/profile-img-test.jpg" alt="image" />
+              <div class="home__social">
+                <a href="" target="_blank" class="home__social-link"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="" target="_blank" class="home__social-link"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="" target="_blank" class="home__social-link"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="home__info">
+              <p class="home__description">
+                <b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit.
+                Reiciendis ut quos voluptatum sequi numquam vel harum velit.
+                Culpa asperiores aut, commodi nobis eum tempore in voluptatibus
+                at itaque aspernatur ad.
+              </p>
+
+              <a href="" class="home__scroll">
+                <div class="home__scroll-btn">
+                  <i class="fa-solid fa-arrow-down"></i>
+                  <!-- TODO: Replace icon -->
+                </div>
+                <span class="home__scroll-text">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section">
+        <div class="about__container container">
+          <h2 class="section__title">About Me</h2>
+
+          <div class="about__profile">
+            <div class="about__image">
+              <img src="./img/profile-img-test2.jpg" alt="image" />
+              <!-- TODO: Alt message -->
+            </div>
+            <div class="about__info">
+              <p class="about__description">
+                Lorem ipsum dolor sit <b>amet consectetur</b> adipisicing elit.
+                Deleniti nisi, veritatis, accusantium inventore unde alias odio
+                debitis porro <b>ea vel</b> odit quos obcaecati fugiat
+                temporibus rem exercitationem dolorum possimus voluptatem!
+              </p>
+              <ul class="about__list">
+                <li class="about__item">
+                  <b>Lorem ipsum</b> dolor sit amet consectetur!
+                </li>
+                <li class="about__item">
+                  <b>Lorem ipsum</b> dolor sit amet consectetur!
+                </li>
+              </ul>
+
+              <div class="about__buttons">
+                <a href="">
+                  <i class="fa-regular fa-paper-plane"></i>Contact Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer"></footer>
   </body>
   <script>
