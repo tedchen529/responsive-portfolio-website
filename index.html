@@ -71,6 +71,8 @@
 
       .nav__link {
         color: var(--text-color-gray);
+        text-decoration: none;
+        /* TODO: Underline on hover */
       }
 
       .nav__close {
@@ -83,7 +85,8 @@
       @media screen and (max-width: 992px) {
         .nav__menu {
           position: fixed;
-          top: -100%;
+          top: -50%;
+          /* TODO: To be adjusted */
           background-color: var(--color-black);
           width: 100%;
           text-align: center;
@@ -149,9 +152,17 @@
       navMenu.classList.add("show-menu");
     });
 
-    // NOTE: Hide menu
+    // NOTE: Hide menu when X is clicked
     navClose.addEventListener("click", () => {
       navMenu.classList.remove("show-menu");
     });
+
+    const navLink = document.querySelectorAll(".nav__link");
+    function hideMenu() {
+      navMenu.classList.remove("show-menu");
+    }
+
+    // NOTE: Hide menu when navlinks are clicked
+    navLink.forEach((link) => link.addEventListener("click", hideMenu));
   </script>
 </html>
