@@ -5,9 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ted Chen | Responsive Portfolio Website</title>
     <!-- TODO: Change favicon -->
+    <!-- TODO: Include fontawesome locally -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --header-height: 5rem;
+        /* TODO: To be adjusted */
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        background-color: lightblue;
+        width: 100%;
+      }
+
+      .nav {
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__logo {
+        background-color: lightyellow;
+        height: 2rem;
+        width: 2rem;
+        /* Q: Responsive sizing? */
+      }
+
+      .nav__toggle {
+        width: 2rem;
+        height: 2rem;
+        /* Q: Responsive sizing? */
+        background-color: lightyellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <nav class="nav">
+        <!-- NOTE: BEM naming convention -->
+        <a href="#" class="nav__logo">
+          <!-- TODO: Design logo -->
+        </a>
+
+        <div class="nav__menu">
+          <h3 class="nav__title">Menu</h3>
+          <h4 class="nav__name">Ted</h4>
+          <ul class="nav__list">
+            <!-- TODO: Create anchor to sections -->
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contact Me</a>
+            </li>
+          </ul>
+
+          <!-- NOTE: Close button -->
+          <div class="nav__close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+
+        <!-- NOTE: Toggle button -->
+        <div class="nav__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
     <main class="main"></main>
     <footer class="footer"></footer>
   </body>
