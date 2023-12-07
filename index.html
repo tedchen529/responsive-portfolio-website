@@ -15,6 +15,7 @@
         --header-height: 5rem;
         --color-black: rgba(0, 0, 0, 0.75);
         --color-white: white;
+        --text-color-gray: lightgray;
         /* TODO: To be adjusted */
       }
 
@@ -64,11 +65,33 @@
         color: var(--color-white);
       }
 
+      .nav__title {
+        margin-bottom: 1rem;
+      }
+
+      .nav__link {
+        color: var(--text-color-gray);
+      }
+
+      .nav__close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+      }
+
       @media screen and (max-width: 992px) {
         .nav__menu {
+          position: fixed;
+          top: -100%;
           background-color: var(--color-black);
           width: 100%;
           text-align: center;
+          transition: top 0.5s;
+        }
+
+        .show-menu {
+          top: 0;
         }
       }
     </style>
@@ -81,7 +104,7 @@
           <!-- TODO: Design logo -->
         </a>
 
-        <div class="nav__menu">
+        <div class="nav__menu" id="nav-menu">
           <h3 class="nav__title">Menu</h3>
           <h4 class="nav__name">Ted</h4>
           <ul class="nav__list">
@@ -101,13 +124,13 @@
           </ul>
 
           <!-- NOTE: Close button -->
-          <div class="nav__close">
+          <div class="nav__close" id="nav-close">
             <i class="fa-solid fa-x"></i>
           </div>
         </div>
 
         <!-- NOTE: Toggle button -->
-        <div class="nav__toggle">
+        <div class="nav__toggle" id="nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
@@ -116,4 +139,19 @@
     <main class="main"></main>
     <footer class="footer"></footer>
   </body>
+  <script>
+    const navMenu = document.querySelector("#nav-menu");
+    const navToggle = document.querySelector("#nav-toggle");
+    const navClose = document.querySelector("#nav-close");
+
+    // NOTE: Toggle menu
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.add("show-menu");
+    });
+
+    // NOTE: Hide menu
+    navClose.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+    });
+  </script>
 </html>
