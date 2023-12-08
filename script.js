@@ -19,6 +19,8 @@ navClose.addEventListener("click", () => {
 const navLink = document.querySelectorAll(".nav__link");
 function hideMenu() {
   navMenu.classList.remove("show-menu");
+  navToggle.classList.remove("hide-button");
+  navClose.classList.add("hide-button");
 }
 
 // NOTE: Hide menu when navlinks are clicked

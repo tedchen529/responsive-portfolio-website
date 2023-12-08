@@ -33,68 +33,72 @@
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <!-- TODO: Create anchor to sections -->
           <li class="nav__item">
-            <a href="#" class="nav__link">Home</a>
+            <a href="#home" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">About Me</a>
+            <a href="#about" class="nav__link">About</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Projects</a>
+            <a href="#experience" class="nav__link">Experience</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Contact Me</a>
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
       </div>
     </header>
 
     <main class="main">
-      <section class="home section">
+      <section class="home section" id="home">
         <div class="home__container container">
-          <h1 class="home__name">Ted Chen</h1>
-
           <div class="home__profile">
-            <div class="home__image">
-              <img src="./img/profile-img-test.jpg" alt="image" />
-              <div class="home__social">
-                <a href="" target="_blank" class="home__social-link"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="" target="_blank" class="home__social-link"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a href="" target="_blank" class="home__social-link"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </div>
-            </div>
+            <h1 class="home__name">Hi, I'm Ted Chen</h1>
+            <h2 class="home__intro">Welcome to my portfolio!</h2>
             <div class="home__info">
               <p class="home__description">
-                <b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit.
-                Reiciendis ut quos voluptatum sequi numquam vel harum velit.
-                Culpa asperiores aut, commodi nobis eum tempore in voluptatibus
-                at itaque aspernatur ad.
+                As a former <b>legal assistant</b> and <b>translator</b> with a
+                background in <b>Finance</b>, I'm on a journey to become a
+                frontend developer.
               </p>
-
-              <a href="" class="home__scroll">
-                <div class="home__scroll-btn">
-                  <i class="fa-solid fa-arrow-down"></i>
-                  <!-- TODO: Replace icon -->
-                </div>
-                <span class="home__scroll-text">Next</span>
-              </a>
             </div>
+            <div class="home__buttons">
+              <button class="home__projects-button">My Projects</button>
+              <button class="home__contact-button">Contact Me</button>
+            </div>
+            <a href="#about" class="home__scroll">
+              <div class="home__scroll-button">
+                <i class="fa-solid fa-arrow-down"></i>
+                <!-- TODO: Replace icon -->
+              </div>
+              <span class="home__scroll-text">Next</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="about__container container">
           <h2 class="section__title">About Me</h2>
 
           <div class="about__profile">
+            <div class="home__social">
+              <a href="" target="_blank" class="home__social-link"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a href="" target="_blank" class="home__social-link"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a href="" target="_blank" class="home__social-link"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+            </div>
             <div class="about__image">
               <img src="./img/profile-img-test2.jpg" alt="image" />
               <!-- TODO: Alt message -->
