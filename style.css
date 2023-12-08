@@ -3,29 +3,17 @@
   --font-size-h1: 2rem;
   --beige-primary: #f5f5dc;
   --beige-secondary: #ebebd3;
+  --beige-light: #f9f9f4;
   --brown-dark: #1a1718;
   --brown-light: #403d3e;
   --brown-lighter: #605b5c;
   --white: white;
-
-  --color-black: rgba(0, 0, 0, 0.75);
-  --color-black-lighter: rgba(0, 0, 0, 0.5);
-
-  --title-color-blue: blue;
-  --text-color-gray: lightgray;
-  --container-color-2: gray;
-  --h2-font-size: 24px;
-  /* TODO: To be adjusted */
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-ul {
-  list-style: none;
 }
 
 .container {
@@ -36,13 +24,11 @@ ul {
 }
 
 .section__title {
-  font-size: var(--h2-font-size);
-  width: max-content;
-  margin: 2rem auto 2rem;
-  /* NOTE: Alternative centering method */
+  /* font-size: var(--h2-font-size); */
+  /* margin: 2rem auto 2rem; */
+  /* width: max-content; */
+  margin: auto;
 }
-
-/* ========== CLEANED BELOW ========== */
 
 .header {
   width: 100%;
@@ -68,6 +54,10 @@ ul {
   font-weight: bold;
   letter-spacing: 1px;
   /* TODO: Search for font style */
+}
+
+.nav__menu > ul {
+  list-style: none;
 }
 
 .nav__toggle {
@@ -131,35 +121,7 @@ ul {
 
 .home__description > b:hover {
   background-color: var(--brown-dark);
-  color: var(--white);
-}
-
-.home__social {
-  display: grid;
-  row-gap: 1rem;
-  width: 1rem;
-  position: absolute;
-  left: 1.25rem;
-  top: 30rem;
-}
-
-.home__social-link {
-  background-color: var(--beige-primary);
-  color: var(--brown-light);
-  transition: background-color 0.3s;
-  line-height: 100%;
-  margin: auto;
-}
-
-.home__social-link:hover {
-  background-color: var(--brown-light);
   color: var(--beige-primary);
-  /* TODO: Find more suitable icons */
-}
-
-.home__social-link > i {
-  font-size: 1.5rem;
-  /* TODO: Adjust */
 }
 
 .home__buttons {
@@ -208,7 +170,7 @@ ul {
   margin: 0 auto;
   text-decoration: none;
   display: grid;
-  color: var(--white);
+  color: var(--beige-primary);
 }
 
 .home__scroll-text {
@@ -224,43 +186,76 @@ ul {
   display: grid;
   place-items: center;
   font-size: 1rem;
+  border-radius: 50%;
   /* transition: background-color 0.3s; */
   /* TODO: Animated button */
 }
 
-/* ========== CLEANED ABOVE ========== */
-
 .about {
-  background-color: var(--container-color-2);
+  background-color: var(--beige-light);
 }
 
-.about__image {
-  width: 200px;
-}
-
-.about__image > img {
-  width: 100%;
-  border: 5px solid var(--color-white);
+.about__profile {
+  display: grid;
+  row-gap: 1.5rem;
+  margin: 3rem 0;
 }
 
 .about__info {
-  padding-left: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.about__image {
+  width: 60%;
+  margin: auto;
+}
+
+.about__image > img {
+  max-width: 100%;
+  /* TODO: Border style */
+}
+
+.about__info {
+  display: grid;
+  row-gap: 1.5rem;
 }
 
 .about__description {
-  color: var(--title-color-blue);
-  margin-bottom: 1.5rem;
+  color: var(--brown-dark);
 }
 
-.about__buttons {
+.about__description > b:hover {
+  background-color: var(--brown-dark);
+  color: var(--beige-light);
+}
+
+.about__list {
+  padding-left: 1.5rem;
+}
+
+.about__social {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
-  /* Q: Column-gap vs gap? */
 }
 
-/* ========== CLEANED BELOW ========== */
+.home__social-link {
+  background-color: var(--beige-primary);
+  color: var(--brown-light);
+  transition: background-color 0.3s;
+  line-height: 100%;
+  margin: auto;
+}
+
+.home__social-link:hover {
+  background-color: var(--brown-light);
+  color: var(--beige-primary);
+  /* TODO: Find more suitable icons */
+}
+
+.home__social-link > i {
+  font-size: 1.5rem;
+  /* TODO: Adjust */
+}
 
 @media screen and (max-width: 576px) {
   .nav__menu {
@@ -283,5 +278,3 @@ ul {
     display: none;
   }
 }
-
-/* ========== CLEANED ABOVE ========== */
