@@ -32,6 +32,8 @@
 
 .header {
   width: 100%;
+  /* position: fixed; */
+  /* z-index: 999; */
 }
 
 .nav {
@@ -91,6 +93,7 @@
 
 .home {
   background-color: var(--beige-primary);
+  /* height: 100vh; */
 }
 
 .home__profile {
