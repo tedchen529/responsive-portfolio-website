@@ -5,273 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ted Chen | Responsive Portfolio Website</title>
     <!-- TODO: Change favicon -->
-    <!-- TODO: Include fontawesome locally -->
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <style>
-      :root {
-        --header-height: 5rem;
-        --color-black: rgba(0, 0, 0, 0.75);
-        --color-black-lighter: rgba(0, 0, 0, 0.5);
-        --color-white: white;
-        --title-color-blue: blue;
-        --text-color-gray: lightgray;
-        --container-color-2: gray;
-        --h2-font-size: 24px;
-        --font-size-max: 40px;
-        /* TODO: To be adjusted */
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      .container {
-        max-width: 1200px;
-        display: grid;
-        gap: 1rem;
-      }
-
-      .section__title {
-        font-size: var(--h2-font-size);
-        width: max-content;
-        margin: 2rem auto 2rem;
-        /* NOTE: Alternative centering method */
-      }
-
-      .header {
-        background-color: lightblue;
-        width: 100%;
-      }
-
-      .nav {
-        height: var(--header-height);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .nav__logo {
-        background-color: lightyellow;
-        height: 2rem;
-        width: 2rem;
-        /* Q: Responsive sizing? */
-      }
-
-      .nav__toggle {
-        width: 2rem;
-        height: 2rem;
-        /* Q: Responsive sizing? */
-        background-color: lightyellow;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-
-      .nav__title,
-      .nav__name,
-      .nav__close {
-        color: var(--color-white);
-      }
-
-      .nav__title {
-        margin-bottom: 1rem;
-      }
-
-      .nav__link {
-        color: var(--text-color-gray);
-        text-decoration: none;
-        /* TODO: Underline on hover */
-      }
-
-      .nav__close {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        cursor: pointer;
-      }
-
-      .home__container {
-        padding: 2rem;
-        /* justify-self: center; */
-      }
-
-      .home__name {
-        /* font-size: var(--font-size-max); */
-        text-align: center;
-      }
-
-      .home__image {
-        display: flex;
-        justify-content: center;
-        position: relative;
-      }
-
-      .home__image > img {
-        width: 300px;
-        /* TODO: To be adjusted */
-      }
-
-      .home__social {
-        display: grid;
-        row-gap: 1rem;
-        position: absolute;
-        left: 0;
-        top: 0;
-        /* FIXME: Problematic positioning */
-      }
-
-      .home__social-link {
-        background-color: var(--color-black-lighter);
-        color: var(--color-white);
-        padding: 6px;
-        transition: background-color 0.3s;
-      }
-
-      .home__social-link:hover {
-        background-color: var(--color-black);
-      }
-
-      .home__social-link > i {
-        font-size: 1rem;
-        /* TODO: Adjust */
-      }
-
-      .home__info {
-        margin-top: 3rem;
-      }
-
-      .home__description {
-        text-align: center;
-        color: var(--title-color-blue);
-        margin-bottom: 2rem;
-      }
-
-      .home__description > b {
-        background-color: green;
-        /* TODO: Linear-gradient */
-      }
-
-      .home__scroll {
-        display: block;
-        /* Q: Why isn't the default "display: block"? */
-        width: max-content;
-        margin: 0 auto;
-        /* NOTE: Centering alternative method */
-      }
-
-      .home__scroll-text {
-        display: none;
-      }
-
-      .home__scroll-btn {
-        background-color: var(--color-black);
-        color: var(--color-white);
-        width: 36px;
-        height: 36px;
-        display: grid;
-        place-items: center;
-        /* NOTE: Centering alternative method */
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s;
-      }
-      /* TODO: Animated button */
-
-      .about {
-        background-color: var(--container-color-2);
-      }
-
-      .about__image {
-        width: 200px;
-      }
-
-      .about__image > img {
-        width: 100%;
-        border: 5px solid var(--color-white);
-      }
-
-      .about__info {
-        padding-left: 1.25rem;
-      }
-
-      .about__description {
-        color: var(--title-color-blue);
-        margin-bottom: 1.5rem;
-      }
-
-      .about__buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        /* Q: Column-gap vs gap? */
-      }
-
-      @media screen and (max-width: 992px) {
-        .nav__menu {
-          position: fixed;
-          top: -50%;
-          /* TODO: To be adjusted */
-          background-color: var(--color-black);
-          width: 100%;
-          text-align: center;
-          transition: top 0.5s;
-        }
-
-        .show-menu {
-          top: 0;
-        }
-      }
-    </style>
+    <!-- TODO: Include fontawesome locally -->
   </head>
   <body>
     <header class="header">
       <nav class="nav">
         <!-- NOTE: BEM naming convention -->
         <a href="#" class="nav__logo">
+          Ted.
           <!-- TODO: Design logo -->
         </a>
-
-        <div class="nav__menu" id="nav-menu">
-          <h3 class="nav__title">Menu</h3>
-          <h4 class="nav__name">Ted</h4>
-          <ul class="nav__list">
-            <!-- TODO: Create anchor to sections -->
-            <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">About Me</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Projects</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Contact Me</a>
-            </li>
-          </ul>
-
-          <!-- NOTE: Close button -->
-          <div class="nav__close" id="nav-close">
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
 
         <!-- NOTE: Toggle button -->
         <div class="nav__toggle" id="nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
+        <!-- NOTE: Close button -->
+        <div class="nav__close hide-button" id="nav-close">
+          <i class="fa-solid fa-x"></i>
+        </div>
       </nav>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!-- TODO: Create anchor to sections -->
+          <li class="nav__item">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contact Me</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main class="main">
@@ -349,30 +125,8 @@
         </div>
       </section>
     </main>
-
     <footer class="footer"></footer>
   </body>
-  <script>
-    const navMenu = document.querySelector("#nav-menu");
-    const navToggle = document.querySelector("#nav-toggle");
-    const navClose = document.querySelector("#nav-close");
 
-    // NOTE: Toggle menu
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.add("show-menu");
-    });
-
-    // NOTE: Hide menu when X is clicked
-    navClose.addEventListener("click", () => {
-      navMenu.classList.remove("show-menu");
-    });
-
-    const navLink = document.querySelectorAll(".nav__link");
-    function hideMenu() {
-      navMenu.classList.remove("show-menu");
-    }
-
-    // NOTE: Hide menu when navlinks are clicked
-    navLink.forEach((link) => link.addEventListener("click", hideMenu));
-  </script>
+  <script src="./script.js"></script>
 </html>
