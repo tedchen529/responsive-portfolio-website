@@ -159,13 +159,11 @@
 }
 
 .home__projects-button:hover {
-  border: none;
   background-color: var(--brown-lighter);
   color: var(--beige-primary);
 }
 
 .home__contact-button:hover {
-  border: none;
   background-color: var(--brown-light);
   color: var(--beige-primary);
 }
@@ -239,9 +237,26 @@
   padding: 3rem 0;
 }
 
+.experience__download-button {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: var(--brown-light);
+  color: var(--beige-primary);
+  margin: auto;
+}
+
+.experience__download-button:hover {
+  background-color: var(--brown-lighter);
+  color: var(--beige-primary);
+}
+
 .experience__work-list {
   display: grid;
-  row-gap: 1.5rem;
+  /* row-gap: 1.5rem; */
   /* NOTE: Temporary */
 }
 
@@ -249,8 +264,9 @@
   list-style: none;
   padding: 1rem;
   position: relative;
-  border-radius: 5px;
-  border: 2px solid var(--brown-lighter);
+  /* border-radius: 5px; */
+  /* border: 1px solid black; */
+  border-left: 1px solid black;
 }
 
 .experience__item > h4 {
@@ -264,7 +280,6 @@
 }
 
 .experience__date {
-  padding-left: 0.7rem;
   font-size: 0.8rem;
   color: black;
   /* TODO: Custom variable for color and font-size */
@@ -276,8 +291,9 @@
   height: 8px;
   background-color: var(--brown-dark);
   position: absolute;
+  border-radius: 50%;
   top: 22px;
-  left: 16px;
+  left: -4px;
 }
 
 /* NOTE: Scroll button */
