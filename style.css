@@ -257,15 +257,12 @@
 .experience__work-list {
   display: grid;
   /* row-gap: 1.5rem; */
-  /* NOTE: Temporary */
 }
 
 .experience__item {
   list-style: none;
   padding: 1rem;
   position: relative;
-  /* border-radius: 5px; */
-  /* border: 1px solid black; */
   border-left: 1px solid black;
 }
 
@@ -294,6 +291,24 @@
   border-radius: 50%;
   top: 22px;
   left: -4px;
+}
+
+.mask-top {
+  position: absolute;
+  width: 12px;
+  height: 24px;
+  background-color: var(--beige-primary);
+  top: -2px;
+  left: -6px;
+}
+
+.mask-bottom {
+  position: absolute;
+  width: 12px;
+  height: 100%;
+  background-color: var(--beige-primary);
+  left: -4px;
+  top: 30px;
 }
 
 /* NOTE: Scroll button */
