@@ -88,6 +88,7 @@
         <div class="about__container container">
           <div class="about__profile">
             <h2 class="section__title">About Me</h2>
+            <!-- TODO: Add education & language -->
             <div class="about__image">
               <img src="./img/about-photo.jpg" alt="Photo image of Ted Chen" />
               <div class="about__social">
@@ -142,12 +143,9 @@
       <section class="experience section" id="experience">
         <div class="experience__container container">
           <h2 class="section__title">My Journey</h2>
-
-          <button class="experience__download-button">Download CV</button>
-
           <ul class="experience__work-list">
             <li class="experience__item">
-              <div class="mask-top"></div>
+              <div class="experience__mask-top"></div>
               <span class="experience__date">2021 - 2022</span>
               <h4>Legal Evidence Consultant</h4>
               <p>
@@ -175,9 +173,10 @@
                 environment for practicing English speaking, typhoon training,
                 and cultural exchange.
               </p>
-              <div class="mask-bottom"></div>
+              <div class="experience__mask-bottom"></div>
             </li>
           </ul>
+          <button class="experience__download-button">Download CV</button>
           <a href="#skills" class="scroll">
             <div class="scroll-button">
               <i class="fa-solid fa-arrow-down"></i>
@@ -188,21 +187,58 @@
         </div>
       </section>
 
-      <section class="skills section" id="skill">
+      <section class="skills section" id="skills">
         <div class="skills__container container">
-          <h2 class="section__title">My Skill</h2>
+          <h2 class="section__title">My Skills</h2>
           <ul class="skills__list">
-            <li class="experience__item">
-              <div class="mask-top"></div>
-              <span class="experience__date">2021 - 2022</span>
-              <h4>Legal Evidence Consultant</h4>
-              <p>
-                Collaborating with immigration lawyers in the United States to
-                assist professors and researchers worldwide in applying for
-                I-140 employment-based immigration.
-              </p>
-              <!-- TODO: Expand -->
+            <li class="skills__item" id="skills__html-css">
+              <div class="skills__text">
+                <p>HTML/CSS</p>
+                <p>90%</p>
+                <!-- TODO: Animated numbers -->
+              </div>
+              <div class="skills__bar">
+                <div class="skills__progress"></div>
+              </div>
             </li>
+            <li class="skills__item" id="skills__js">
+              <div class="skills__text">
+                <p>Vanilla JavaScript</p>
+                <p>80%</p>
+                <!-- TODO: Animated numbers -->
+              </div>
+              <div class="skills__bar">
+                <div class="skills__progress"></div>
+              </div>
+            </li>
+            <li class="skills__item" id="skills__react">
+              <div class="skills__text">
+                <p>React.js</p>
+                <p>70%</p>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__progress"></div>
+              </div>
+            </li>
+            <li class="skills__item" id="skills__node">
+              <div class="skills__text">
+                <p>Node.js</p>
+                <p>60%</p>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__progress"></div>
+              </div>
+            </li>
+            <li class="skills__item" id="skills__mysql">
+              <div class="skills__text">
+                <p>MySQL</p>
+                <p>50%</p>
+              </div>
+              <div class="skills__bar">
+                <div class="skills__progress"></div>
+              </div>
+            </li>
+            <!-- TODO: See full list -->
           </ul>
           <a href="#projects" class="scroll">
             <div class="scroll-button">

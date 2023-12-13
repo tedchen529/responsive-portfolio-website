@@ -94,10 +94,16 @@
   /* TODO: Better hover effects */
 }
 
+/* NOTE: Alternating bg colors */
 .home,
 .experience {
   background-color: var(--beige-primary);
   /* height: 100vh; */
+}
+
+.about,
+.skills {
+  background-color: var(--beige-light);
 }
 
 .home__profile {
@@ -168,10 +174,6 @@
   color: var(--beige-primary);
 }
 
-.about {
-  background-color: var(--beige-light);
-}
-
 .about__profile {
   display: grid;
   row-gap: 1.5rem;
@@ -235,6 +237,7 @@
 
 .experience__container {
   padding: 3rem 0;
+  gap: 1.5rem;
 }
 
 .experience__download-button {
@@ -293,7 +296,7 @@
   left: -4px;
 }
 
-.mask-top {
+.experience__mask-top {
   position: absolute;
   width: 12px;
   height: 24px;
@@ -302,13 +305,54 @@
   left: -6px;
 }
 
-.mask-bottom {
+.experience__mask-bottom {
   position: absolute;
   width: 12px;
   height: 100%;
   background-color: var(--beige-primary);
   left: -4px;
   top: 30px;
+}
+
+.skills__container {
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+
+.skills__list {
+  width: 100%;
+  height: 300px;
+  border: 3px solid var(--brown-dark);
+  border-radius: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skills__text {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.skills__bar {
+  width: 80%;
+  height: 1.25rem;
+  border: 2px solid var(--brown-dark);
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+}
+
+.skills__progress {
+  background-color: var(--brown-lighter);
+  height: 60%;
+  width: 90%;
+  border-radius: 3px;
 }
 
 /* NOTE: Scroll button */
