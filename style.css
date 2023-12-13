@@ -1,31 +1,22 @@
 :root {
   --navbar-height: 4rem;
   --font-size-h1: 2rem;
+  /* --font-size-h2: 1.5rem; */
+  /* --font-size-h4: 1.25rem; */
+  /* --font-size-p: 1rem; */
   --beige-primary: #f5f5dc;
   --beige-secondary: #ebebd3;
+  --beige-light: #f9f9f4;
   --brown-dark: #1a1718;
   --brown-light: #403d3e;
   --brown-lighter: #605b5c;
   --white: white;
-
-  --color-black: rgba(0, 0, 0, 0.75);
-  --color-black-lighter: rgba(0, 0, 0, 0.5);
-
-  --title-color-blue: blue;
-  --text-color-gray: lightgray;
-  --container-color-2: gray;
-  --h2-font-size: 24px;
-  /* TODO: To be adjusted */
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-ul {
-  list-style: none;
 }
 
 .container {
@@ -36,16 +27,16 @@ ul {
 }
 
 .section__title {
-  font-size: var(--h2-font-size);
-  width: max-content;
-  margin: 2rem auto 2rem;
-  /* NOTE: Alternative centering method */
+  /* font-size: var(--h2-font-size); */
+  /* margin: 2rem auto 2rem; */
+  /* width: max-content; */
+  margin: auto;
 }
-
-/* ========== CLEANED BELOW ========== */
 
 .header {
   width: 100%;
+  /* position: fixed; */
+  /* z-index: 999; */
 }
 
 .nav {
@@ -68,6 +59,10 @@ ul {
   font-weight: bold;
   letter-spacing: 1px;
   /* TODO: Search for font style */
+}
+
+.nav__menu > ul {
+  list-style: none;
 }
 
 .nav__toggle {
@@ -99,8 +94,16 @@ ul {
   /* TODO: Better hover effects */
 }
 
-.home {
+/* NOTE: Alternating bg colors */
+.home,
+.experience {
   background-color: var(--beige-primary);
+  /* height: 100vh; */
+}
+
+.about,
+.skills {
+  background-color: var(--beige-light);
 }
 
 .home__profile {
@@ -131,35 +134,7 @@ ul {
 
 .home__description > b:hover {
   background-color: var(--brown-dark);
-  color: var(--white);
-}
-
-.home__social {
-  display: grid;
-  row-gap: 1rem;
-  width: 1rem;
-  position: absolute;
-  left: 1.25rem;
-  top: 30rem;
-}
-
-.home__social-link {
-  background-color: var(--beige-primary);
-  color: var(--brown-light);
-  transition: background-color 0.3s;
-  line-height: 100%;
-  margin: auto;
-}
-
-.home__social-link:hover {
-  background-color: var(--brown-light);
   color: var(--beige-primary);
-  /* TODO: Find more suitable icons */
-}
-
-.home__social-link > i {
-  font-size: 1.5rem;
-  /* TODO: Adjust */
 }
 
 .home__buttons {
@@ -190,77 +165,224 @@ ul {
 }
 
 .home__projects-button:hover {
-  border: none;
   background-color: var(--brown-lighter);
   color: var(--beige-primary);
 }
 
 .home__contact-button:hover {
-  border: none;
   background-color: var(--brown-light);
   color: var(--beige-primary);
 }
 
-.home__scroll {
+.about__profile {
+  display: grid;
+  row-gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.about__info {
+  /* margin-top: 1.5rem; */
+}
+
+.about__image {
+  width: 60%;
+  margin: auto;
+}
+
+.about__image > img {
+  max-width: 100%;
+  /* TODO: Border style */
+}
+
+.about__info {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.about__description {
+  color: var(--brown-dark);
+}
+
+.about__description > b:hover {
+  background-color: var(--brown-dark);
+  color: var(--beige-light);
+}
+
+.about__list {
+  padding-left: 1.5rem;
+}
+
+.about__social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.about__social-link {
+  background-color: var(--beige-secondary);
+  color: var(--brown-light);
+  transition: background-color 0.3s;
+  line-height: 100%;
+}
+
+.about__social-link:hover {
+  background-color: var(--brown-light);
+  color: var(--beige-primary);
+  /* TODO: Find more suitable icons */
+}
+
+.about__social-link > i {
+  font-size: 1.5rem;
+}
+
+.experience__container {
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+
+.experience__download-button {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: var(--brown-light);
+  color: var(--beige-primary);
+  margin: auto;
+}
+
+.experience__download-button:hover {
+  background-color: var(--brown-lighter);
+  color: var(--beige-primary);
+}
+
+.experience__work-list {
+  display: grid;
+  /* row-gap: 1.5rem; */
+}
+
+.experience__item {
+  list-style: none;
+  padding: 1rem;
+  position: relative;
+  border-left: 1px solid black;
+}
+
+.experience__item > h4 {
+  padding: 0.25rem 0;
+  color: black;
+  /* TODO: Custom variable */
+}
+
+.experience__item > p {
+  color: var(--brown-lighter);
+}
+
+.experience__date {
+  font-size: 0.8rem;
+  color: black;
+  /* TODO: Custom variable for color and font-size */
+}
+
+.experience__date::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--brown-dark);
+  position: absolute;
+  border-radius: 50%;
+  top: 22px;
+  left: -4px;
+}
+
+.experience__mask-top {
+  position: absolute;
+  width: 12px;
+  height: 24px;
+  background-color: var(--beige-primary);
+  top: -2px;
+  left: -6px;
+}
+
+.experience__mask-bottom {
+  position: absolute;
+  width: 12px;
+  height: 100%;
+  background-color: var(--beige-primary);
+  left: -4px;
+  top: 30px;
+}
+
+.skills__container {
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+
+.skills__list {
+  width: 100%;
+  height: 300px;
+  border: 3px solid var(--brown-dark);
+  border-radius: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skills__text {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.skills__bar {
+  width: 80%;
+  height: 1.25rem;
+  border: 2px solid var(--brown-dark);
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+}
+
+.skills__progress {
+  background-color: var(--brown-lighter);
+  height: 60%;
+  width: 90%;
+  border-radius: 3px;
+}
+
+/* NOTE: Scroll button */
+.scroll {
   /* display: block; */
   /* Q: Why isn't the default "display: block"? */
   /* width: max-content; */
   margin: 0 auto;
   text-decoration: none;
   display: grid;
-  color: var(--white);
+  color: var(--beige-primary);
 }
 
-.home__scroll-text {
+.scroll-text {
   /* display: none; */
   margin: auto;
   color: var(--brown-dark);
 }
 
-.home__scroll-button {
+.scroll-button {
   background-color: var(--brown-dark);
   width: 2.25rem;
   height: 2.25rem;
   display: grid;
   place-items: center;
   font-size: 1rem;
+  border-radius: 50%;
   /* transition: background-color 0.3s; */
   /* TODO: Animated button */
 }
-
-/* ========== CLEANED ABOVE ========== */
-
-.about {
-  background-color: var(--container-color-2);
-}
-
-.about__image {
-  width: 200px;
-}
-
-.about__image > img {
-  width: 100%;
-  border: 5px solid var(--color-white);
-}
-
-.about__info {
-  padding-left: 1.25rem;
-}
-
-.about__description {
-  color: var(--title-color-blue);
-  margin-bottom: 1.5rem;
-}
-
-.about__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  /* Q: Column-gap vs gap? */
-}
-
-/* ========== CLEANED BELOW ========== */
 
 @media screen and (max-width: 576px) {
   .nav__menu {
@@ -283,5 +405,3 @@ ul {
     display: none;
   }
 }
-
-/* ========== CLEANED ABOVE ========== */
